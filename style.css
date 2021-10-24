@@ -1,0 +1,264 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  background-color: #c53f3f;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 0.7rem;
+  box-shadow: 0 0.9rem 1.8rem rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+  width: 48rem;
+  max-width: 100%;
+  min-height: 30rem;
+}
+
+.form {
+  background-color: #fff;
+  padding: 3rem;
+  height: 100%;
+  text-align: center;
+  width: 24rem;
+  position: absolute;
+  transition: all 0.6s ease-in-out;
+}
+
+h1 {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background-color: #eee;
+  border: none;
+  padding: 0.75rem 0.9rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+input:focus {
+  outline: none !important;
+  border: 2px solid #c53f3f;
+}
+
+input[type="button"] {
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #c53f3f;
+  text-decoration: underline;
+}
+
+input[type="button"]:focus {
+  border: none;
+}
+
+.checkbox-news {
+  text-align: left;
+  margin: 0.3rem 0;
+}
+
+button {
+  font-size: 16px;
+  color: #fff;
+  background-color: #c53f3f;
+  border: none;
+  padding: 0.75rem 0.9rem;
+  margin: 0.5rem 0;
+  width: 100%;
+  transition: transform 80ms ease-in;
+}
+
+button:hover {
+  background-color: #e65151;
+  cursor: pointer;
+}
+
+hr {
+  height: 1.9rem;
+  border-style: solid;
+  border-color: #c53f3f;
+  border-width: 1px 0 0 0;
+  border-radius: 1.25rem;
+  margin-top: 1rem;
+}
+
+.social {
+  margin-bottom: 1.25rem;
+}
+
+.social a {
+  border: none;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.3rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+span {
+  display: inline-block;
+  margin: 1.1rem 0 0 0;
+}
+
+.forgot-password {
+  color: #c53f3f;
+  cursor: pointer;
+}
+
+.social-container a:hover {
+  cursor: pointer;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.google {
+  background-color: #c53f3f;
+}
+
+.twitter {
+  background-color: #1da1f2;
+}
+
+.linkedin {
+  background-color: #2867b2;
+}
+
+.sign-in-card {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+
+.card.right-panel-active .sign-in-card {
+  transform: translateX(100%);
+}
+
+.sign-up-card {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+
+.card.right-panel-active .sign-up-card {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: show 0.6s;
+}
+
+@keyframes show {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+.overlay-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.6s ease-in-out;
+  z-index: 100;
+}
+
+.card.right-panel-active .overlay-card {
+  transform: translateX(-100%);
+}
+
+.overlay {
+  background-color: #cfd8dc;
+  color: #fff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.img-sign-up {
+  margin-top: 0.4rem;
+}
+
+.card.right-panel-active .overlay {
+  transform: translateX(50%);
+}
+
+.overlay-panel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 2.5rem;
+  text-align: center;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+  transform: translateX(-20%);
+}
+
+.card.right-panel-active .overlay-left {
+  transform: translateX(0);
+}
+
+.overlay-right {
+  right: 0;
+  transform: translateX(0);
+}
+
+.card.right-panel-active .overlay-right {
+  transform: translateX(20%);
+}
+
+footer {
+  color: #fff;
+  position: absolute;
+  bottom: -27%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 40rem;
+  }
+}

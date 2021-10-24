@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ac35092648.js" crossorigin="anonymous"></script>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <title>Sgin Up/Sign In</title>
+</head>
+
+<body>
+    <div class="card" id="card">
+        <div class="form sign-up-card">
+            <form action="#">
+                <form action="">
+                    <h1>Sign Up</h1>
+                    <input type="text" name="" id="" placeholder="Full Name">
+                    <input type="email" name="" id="" placeholder="Email">
+                    <input type="password" name="" id="" placeholder="Password">
+                    <div class="checkbox-news">
+                        <input type="checkbox" name="news" id="news">
+                        <label for="news">I want to receive emails with exclusive
+                            deals, recommendations and learning tips!</label>
+                    </div>
+                    <button>Sign Up</button>
+                    <hr>
+                    <label>Already have an account?</label>
+                    <input type="button" id="signIn" value="Sign in">
+                </form>
+        </div>
+        <div class="form sign-in-card">
+            <form action="">
+                <h1>Sign In</h1>
+                <input type="email" name="" id="" placeholder="Email">
+                <input type="password" name="" id="" placeholder="Password">
+                <button>Sign In</button>
+                <span>or <label class="forgot-password">Forgot Password</label></span>
+                <hr>
+                <div class="social">
+                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="google"><i class="fab fa-google"></i></a>
+                    <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>Don't have an account?</span>
+                <input type="button" id="signUp" value="Sign up">
+            </form>
+        </div>
+        <div class="overlay-card">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <img src="img/sign-up.png" alt="" width="400" class="img-sign-up">
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <img src="img/sign-in.png" alt="" width="400">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2021. All Rights Reserved.</p>
+        <p>Design by Learn With RATSA.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
